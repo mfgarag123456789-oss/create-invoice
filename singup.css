@@ -1,0 +1,168 @@
+/* تعريف المتغيرات */
+:root {
+    --primary-green: #38a169; /* أخضر الزر */
+    --light-green: #48bb78;
+    --background-blur: 15px; /* قيمة ضبابية البطاقة */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----------------------------------- */
+/* 1. تنسيق الخلفية (صورة المراعي) */
+/* ----------------------------------- */
+
+.background {
+    width: 100%;
+    height: 100%;
+    /* يجب تغيير هذا المسار ليتناسب مع صورتك */
+    background-image: url(WhatsApp\ Image\ 2025-12-11\ at\ 1.09.05\ AM.jpeg); 
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 20;
+}
+
+/* ----------------------------------- */
+/* 2. تنسيق بطاقة تسجيل الدخول (Glassmorphism) */
+/* ----------------------------------- */
+
+.login-card {
+    width: 90%;
+    max-width: 380px;
+    padding: 30px 30px 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); 
+    
+    /* تأثير الزجاج المصنفر! */
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(var(--background-blur)); 
+    -webkit-backdrop-filter: blur(var(--background-blur));
+    
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    
+    color: white;
+    z-index: 10;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ----------------------------------- */
+/* 3. تنسيق حقول الإدخال والأزرار (LTR - الأيقونة على اليمين) */
+/* ----------------------------------- */
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    /* مساحة للأيقونة على اليمين */
+    padding: 15px 45px 15px 15px; 
+    box-sizing: border-box; 
+    
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1); 
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* تنسيق الأيقونات (على اليمين) */
+.input-group .icon {
+    position: absolute; 
+    top: 50%;
+    /* نضعها على اليمين */
+    right: 15px; 
+    left: auto; /* مهم للتأكد من إلغاء أي قيمة سابقة */
+    
+    transform: translateY(-50%); 
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+    cursor: pointer; /* مهم لزر العين */
+}
+
+/* ----------------------------------- */
+/* 4. زر التسجيل الأخضر المتدرج */
+/* ----------------------------------- */
+
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    
+    /* تدرج لوني */
+    background: linear-gradient(to right, var(--primary-green), var(--light-green));
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s;
+}
+
+/* ----------------------------------- */
+/* 5. تنسيق رابط Signup/Login */
+/* ----------------------------------- */
+
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.signup-link a {
+    color: var(--light-green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.creator-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+}

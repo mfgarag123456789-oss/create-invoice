@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvoPay | لوحة التحكم</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">Invo<span>Pay</span></div>
+            <nav class="side-nav">
+                <a href="dashboard.html" class="active">
+                    <i class="fas fa-home"></i> الرئيسية
+                </a>
+                <a href="invoices-list.html">
+                    <i class="fas fa-file-invoice"></i> فواتيري
+                </a>
+                <a href="create-invoice.html">
+                    <i class="fas fa-plus-circle"></i> إنشاء فاتورة
+                </a>
+                <a href="customers.html">
+                    <i class="fas fa-users"></i> العملاء
+                </a>
+                <a href="settings.html">
+                    <i class="fas fa-cog"></i> الإعدادات
+                </a>
+                
+                <a href="index.html" class="logout">
+                    <i class="fas fa-sign-out-alt"></i> خروج
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="user-info">Welcome: mohamed farag</div>
+                <h1>لوحة التحكم</h1>
+            </header>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="icon-box"><i class="fas fa-wallet"></i></div>
+                    <h3>إجمالي المبيعات</h3>
+                    <p>12,500 ج.م</p>
+                </div>
+                <div class="stat-card">
+                    <div class="icon-box"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3>فواتير مدفوعة</h3>
+                    <p>8</p>
+                </div>
+                <div class="stat-card">
+                    <div class="icon-box"><i class="fas fa-clock"></i></div>
+                    <h3>فواتير معلقة</h3>
+                    <p>3</p>
+                </div>
+            </section>
+
+            <section class="recent-invoices-section">
+                <h2>آخر الفواتير</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>رقم الفاتورة</th>
+                                <th>العميل</th>
+                                <th>التاريخ</th>
+                                <th>المبلغ</th>
+                                <th>الحالة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>INV-001#</td>
+                                <td>شركة الأمل</td>
+                                <td>2024/03/10</td>
+                                <td>2,000 ج.م</td>
+                                <td><span class="status paid">مدفوعة</span></td>
+                            </tr>
+                            <tr>
+                                <td>INV-002#</td>
+                                <td>معرض التقوى</td>
+                                <td>2024/03/12</td>
+                                <td>1,500 ج.م</td>
+                                <td><span class="status pending">معلقة</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

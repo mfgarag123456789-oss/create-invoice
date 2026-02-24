@@ -1,0 +1,171 @@
+/* الإعدادات الأساسية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    direction: rtl;
+    background-color: #f4f7f6;
+}
+
+.dashboard-container {
+    display: flex;
+}
+
+/* القائمة الجانبية (Sidebar) */
+.sidebar {
+    width: 260px;
+    background-color: #2c3e50;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.logo span { color: #2ecc71; }
+
+.side-nav a {
+    color: #bdc3c7;
+    text-decoration: none;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.side-nav a.active {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.side-nav a i { margin-left: 12px; font-size: 18px; }
+
+.logout { margin-top: auto; color: #e74c3c !important; font-weight: bold; }
+
+/* المحتوى الرئيسي */
+.main-content {
+    flex: 1;
+    margin-right: 260px;
+    padding: 40px;
+}
+
+.invoices-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.btn-new-invoice {
+    background-color: #2ecc71;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* الحاوية الرمادية كما بالصورة */
+.gray-layout-box {
+    background-color: #f0f2f5;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.search-filter-section {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+}
+
+.search-box {
+    position: relative;
+    width: 350px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.search-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+/* الجدول الأبيض */
+.white-table-card {
+    background: white;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.main-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: right;
+}
+
+.main-data-table th {
+    padding: 18px 15px;
+    color: #95a5a6;
+    border-bottom: 1px solid #eee;
+}
+
+.main-data-table td {
+    padding: 20px 15px;
+    color: #2c3e50;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+/* أيقونات الإجراءات */
+.actions-cell i {
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 15px;
+}
+.view { color: #3498db; }
+.edit { color: #f39c12; }
+.delete { color: #e74c3c; }
+
+/* أوسمة الحالة */
+.badge-status {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+.paid { background: #e8f5e9; color: #2ecc71; }
+.pending { background: #fffde7; color: #f1c40f; }
+
+
+
+
+
+
+
+
+
+
