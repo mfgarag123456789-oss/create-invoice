@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #f0f9f9; /* اللون الفاتح الثلجي المريح للعين */
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 100%;
+}
+
+/* القسم الغامق العلوي (مساحة أصغر) */
+/* الحاوية الأساسية عشان تضمن إن المحتوى في النص */
+.app-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* توسيط المحتوى أفقياً */
+    padding-top: 20px;
+}
+
+/* المربع الغامق العلوي - التعديل الأساسي هنا */
+.dark-card {
+    background-color: #0d1b1e;
+    color: white;
+    width: 90%; /* صغرنا العرض عشان ميبقاش واخد الصفحة كلها */
+    max-width: 1100px; /* أقصى عرض ليه عشان ميكبرش بزيادة في الشاشات الواسعة */
+    padding: 25px 40px;
+    border-radius: 20px; /* حواف دائرية من كل الجهات ليظهر كمربع منفصل */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* ظل خفيف لإبرازه */
+    margin-bottom: 20px; /* مسافة بينه وبين الجزء الفاتح اللي تحته */
+}
+
+/* تعديل الجزء الفاتح اللي تحت عشان يبدأ بتناسق */
+.light-content {
+    width: 90%;
+    max-width: 1100px;
+    padding: 20px 0; /* شيلنا الـ padding الجانبي عشان معتمدين على عرض الحاوية */
+}
+
+/* تعديل شبكة المدخلات عشان توفر مساحة */
+.inputs-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 30px;
+    margin-top: 15px;
+}
+
+.logo-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.logo { font-size: 24px; font-weight: bold; }
+.logo span { color: #2ecc71; }
+
+.btn-outline {
+    background: transparent;
+    color: #2ecc71;
+    border: 1.5px solid #2ecc71;
+    padding: 5px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.title { text-align: center; font-size: 22px; margin-bottom: 25px; }
+
+.section-subtitle { font-size: 14px; margin-bottom: 12px; opacity: 0.9; }
+
+.inputs-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 40px;
+}
+
+.input-box label { display: block; font-size: 13px; margin-bottom: 5px; }
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: white;
+    color: #333;
+}
+
+/* الجزء الفاتح الرئيسي */
+.light-content {
+    padding: 40px 10%;
+}
+
+.table-title { font-size: 16px; margin-bottom: 20px; color: #444; }
+
+.table-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.invoice-table th {
+    background: #eef5f5;
+    padding: 15px;
+    text-align: right;
+    color: #555;
+    font-size: 14px;
+}
+
+.invoice-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.invoice-table input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.row-total { color: #2ecc71; font-weight: bold; }
+
+.add-btn {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.invoice-footer {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.calculation-box p { margin-bottom: 8px; font-size: 16px; color: #555; }
+.final-total { color: #2ecc71; font-weight: bold; font-size: 20px; }
+
+.save-print-btn {
+    width: 100%;
+    background: #2ecc71;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.save-print-btn:hover { background: #27ae60; transform: translateY(-2px); }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvoPay - إنشاء فاتورة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="invoice-style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="dark-card">
+            <div class="logo-bar">
+                <div class="logo">invo<span>Pay</span></div>
+                <button class="btn-outline">العودة للوحة التحكم</button>
+            </div>
+            
+            <h2 class="title">نموذج فاتورة جديدة</h2>
+
+            <div class="customer-fields">
+                <p class="section-subtitle">👤 بيانات العميل</p>
+                <div class="inputs-row">
+                    <div class="input-box">
+                        <label>اسم العميل</label>
+                        <input type="text">
+                    </div>
+                    <div class="input-box">
+                        <label>العنوان</label>
+                        <input type="text">
+                    </div>
+                    <div class="input-box">
+                        <label>البريد الإلكتروني</label>
+                        <input type="email">
+                    </div>
+                    <div class="input-box">
+                        <label>تاريخ الفاتورة</label>
+                                               <input type="text" placeholder=" يوم/شهر/سنه" class="manual-date" required>            
+
+                            </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="light-content">
+            <h3 class="table-title">📋 المنتجات والخدمات</h3>
+            <div class="table-container">
+                <table class="invoice-table">
+                    <thead>
+                        <tr>
+                            <th>الوصف</th>
+                            <th>الكمية</th>
+                            <th>سعر الوحدة</th>
+                            <th>الإجمالي</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" placeholder="اسم الخدمة"></td>
+                            <td><input type="number" value="1"></td>
+                            <td><input type="number" placeholder="0.00"></td>
+                            <td class="row-total">0.00 ج.م</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="add-btn">+ إضافة بند جديد</button>
+
+            <div class="invoice-footer">
+                <div class="calculation-box">
+                    <p>الإجمالي الفرعي: <span>0.00 ج.م</span></p>
+                    <p class="final-total">الإجمالي الكلي: <span>0.00 ج.م</span></p>
+                </div>
+                <button class="save-print-btn">حفظ و طباعة الفاتورة</button>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
