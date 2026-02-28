@@ -1,0 +1,115 @@
+/* الألوان والتعريفات */
+:root {
+    --brand-dark: #061E29; 
+    --brand-green: #38a169;
+    --page-bg: #E9FFFD; /* اللون الجديد اللي طلبته */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+/* الخلفية باللون الجديد */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    background-color: var(--page-bg);
+}
+
+/* السايدبار باللون الداكن */
+.sidebar-custom {
+    width: 270px;
+    background-color: var(--brand-dark);
+    color: white;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo { font-size: 26px; font-weight: bold; text-align: center; margin-bottom: 50px; }
+.logo span { color: #48bb78; }
+
+.nav-menu ul { list-style: none; }
+.nav-menu ul li { margin-bottom: 15px; }
+.nav-menu ul li a {
+    color: #cbd5e0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* زر اتصل بنا النشط */
+.nav-menu ul li.active a { background-color: var(--brand-green); color: white; }
+
+.logout-section { margin-top: auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+.logout-section a { color: #fc8181; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+
+/* منطقة المحتوى */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* الكارت الداكن */
+.contact-card-custom {
+    background-color: var(--brand-dark);
+    border-radius: 30px;
+    padding: 50px;
+    width: 100%;
+    max-width: 950px;
+    color: white;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* ظل خفيف ليناسب الخلفية الفاتحة */
+}
+
+.card-header h1 { font-size: 30px; margin-bottom: 10px; }
+.card-header p { color: #a0aec0; margin-bottom: 35px; }
+
+.layout-grid { display: flex; gap: 40px; }
+
+.contact-form { flex: 2; }
+.form-row { display: flex; gap: 20px; }
+.input-field { flex: 1; margin-bottom: 15px; }
+.input-field label { display: block; margin-bottom: 8px; font-size: 14px; color: #cbd5e0; }
+
+/* المربعات البيضاء للبيانات */
+.input-field input, .input-field textarea {
+    width: 100%;
+    padding: 13px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    color: #061E29; 
+    outline: none;
+    font-size: 15px;
+}
+
+.btn-submit {
+    margin-top: 20px;
+    background-color: var(--brand-green);
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* معلومات التواصل الجانبية */
+.contact-info-panel { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+.info-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.info-item i { color: #48bb78; font-size: 18px; }
